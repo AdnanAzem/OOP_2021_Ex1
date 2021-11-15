@@ -10,13 +10,13 @@ class Building:
 
     def loadFromJson(self, file_name):
         with open(file_name, "r") as f:
-            building_d = json.load(f)
+            building_dict = json.load(f)
 
-            self.min_floor = building_d["_minFloor"]
-            self.max_floor = building_d["_maxFloor"]
+            self.min_floor = building_dict["_minFloor"]
+            self.max_floor = building_dict["_maxFloor"]
             self.elevators = []
 
-            for elv in building_d["_elevators"]:
+            for elv in building_dict["_elevators"]:
                 id = elv["_id"]
                 speed = elv["_speed"]
                 min_floor = elv["_minFloor"]
