@@ -15,7 +15,7 @@ class Building:
                 counter += 1
 
     def __str__(self):
-        ans = "[" + str(self.maxFloor) + ", " + str(self.maxFloor) + "]\n"
+        ans = "[" + str(self.minFloor) + ", " + str(self.maxFloor) + "]\n"
         for elev in self.elevators:
             ans = ans + elev.__str__()
         return ans
