@@ -15,7 +15,7 @@ class CallForElevator:
         self.totalTime = -1
 
     def __str__(self):
-        return self.name + ", " + ", " + str(self.time) + ", " + str(self.src) + ", " + str(self.dest) + ", " + self.state + ", " + self.allocatedTo
+        return self.name + ", " + str(self.time) + ", " + str(self.src) + ", " + str(self.dest) + ", " + self.state + ", " + self.allocatedTo
 
     def changeState(self, s):
         if not (s == self.LEVEL or s == self.DONE):
