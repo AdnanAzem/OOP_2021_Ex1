@@ -61,17 +61,17 @@ def saveOutput(file):
         output.writerows(data)
 
 def run(building, output):
-    subprocess.Popen(["powershell.exe",
-                      "java -jar tester\\Ex1_checker_V1.2_obf.jar 212068597,208940320 " + building + "  " + output + "  " + output + "_tester.log"])
+    subprocess.Popen(["powershell.exe", "java -jar tester\\Ex1_checker_V1.2_obf.jar 212068597,208940320 " + building + "  " + output + "  " + output + "_tester.log"])
+
 
 if __name__ == '__main__':
-    #files = ["inputs\\buildings\\B1.json","inputs\\calls\\Calls_a.csv","outputs\\out.csv"]
     print("write the directory for json file: ")
     files = [input()]
     print("write the directory for call file: ")
     files.append(input())
     print("write the directory for output file: ")
     files.append(input())
+
     loadFiles
     building = Building(files[0])
     calls = []
